@@ -1,0 +1,43 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+<p id="demo"><font color="black"></font></p>
+
+<script>
+var d=new Date();
+document.getElementById("demo").innerHTML=d;
+function validateform()
+{
+
+var x=document.forms["myform"]["fname"].value;
+if(x=="")
+{
+alert("empty field not accepted");
+return false;
+}
+var y=document.forms["myform"]["mail"].value;
+if(y=="")
+{
+alert("empty field not accepted");
+return false;
+}
+var z=document.forms["myform"]["pwd"].value;
+if(z=="")
+{
+alert("empty field not accepted");
+return false;
+}
+}
+
+
+</script>
+</head>
+<body background="11.jpg">
+
+<form name="frm1" onsubmit="return validateform()">
+<h2>Name:<input type="text" name="name"></h2>
+<h2>E-MAIL:<input type="email" name="mail"></h2>
+<h2>PASSWORD:<input type="password" name="pwd"></h2> <h2>CONFIRM PASSWORD:<input type="password" name="cpwd"></h2>
+<h2><a href="xyz.html"><input type="submit" value="SUBMIT"></a></h2><br><br>
+
+</body>
